@@ -1,5 +1,5 @@
 package com.example.passwordapp;
-
+//
 import javax.persistence.*;
 
 @Entity
