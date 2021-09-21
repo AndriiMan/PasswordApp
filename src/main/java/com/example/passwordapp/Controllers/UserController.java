@@ -10,6 +10,13 @@ public class UserController {
     @Autowired
     UserService userService;
 
+
+    @GetMapping("/getuser/{id}")
+    private User getStudent(@PathVariable("id") long id)
+    {
+        return userService.getUserById(id);
+    }
+
     @GetMapping("/get")
     public String index() {
         return "Greetings from Spring Boot!";

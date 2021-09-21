@@ -1,5 +1,6 @@
 package com.example.passwordapp.service;
 
+import com.example.passwordapp.Controllers.UserController;
 import com.example.passwordapp.Repository.UserDataBaseRepository;
 import com.example.passwordapp.User;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +19,11 @@ public class UserService implements UserPasswordServiceInterface {
     @Autowired
     UserDataBaseRepository userRepository;
 
+    public User getUserById(long id)
+    {
+        return userRepository.findById(id).get();
+    }
+
     //getting all users acaunts
     public List<User> getAllUsers()
     {
@@ -28,6 +34,7 @@ public class UserService implements UserPasswordServiceInterface {
 
     public void saveOrUpdate(User user)
     {
+        user.setPassword(generatePasswordByNameAndUrl(user.getName(),user.getUrl()));
         userRepository.save(user);
     }
 

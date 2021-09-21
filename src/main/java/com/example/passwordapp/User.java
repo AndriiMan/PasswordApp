@@ -22,6 +22,11 @@ public class User {
         this.password = password;
     }
 
+    public User(String name, String url) {
+        this.name = name;
+        this.url = url;
+    }
+
     public User() {
 
     }
