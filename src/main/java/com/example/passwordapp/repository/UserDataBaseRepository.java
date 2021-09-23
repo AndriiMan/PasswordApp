@@ -10,4 +10,5 @@ import java.util.List;
 public interface UserDataBaseRepository extends CrudRepository<User, Long> {
     //Iterable<User> findUserByName(Iterable<String> iterable);
     List<User> findUserByName(String name);
+
 }

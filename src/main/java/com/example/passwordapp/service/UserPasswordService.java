@@ -1,5 +1,5 @@
 package com.example.passwordapp.service;
 
-public interface UserPasswordServiceInterface {
+public interface UserPasswordService {
     public String generatePasswordByName(String name);
 }
