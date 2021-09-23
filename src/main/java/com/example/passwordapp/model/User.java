@@ -1,4 +1,4 @@
-package com.example.passwordapp;
+package com.example.passwordapp.model;
 
 import javax.persistence.*;
 
@@ -12,6 +12,7 @@ public class User {
     private Long id;
 
 
+    @Column(name = "name")
     private String name;
     private String url;
     private String password;
